@@ -5,7 +5,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 -- Create the database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS orca_truck_parts CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS 4725017_mad362 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE orca_truck_parts;
 
 -- Table structure for table `users`
