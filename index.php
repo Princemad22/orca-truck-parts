@@ -86,8 +86,8 @@ $partners = [
 
 <div class="hero-section text-center">
     <div class="container">
-        <h1><?php echo __('welcome_to'); ?> ORCA Truck Parts</h1>
-        <p><?php echo __('hero_description'); ?></p>
+        <h1 class="<?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('welcome_to'); ?> <span class="en-text">ORCA Truck Parts</span></h1>
+        <p class="<?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('hero_description'); ?></p>
         <a href="products.php" class="btn btn-light btn-lg"><?php echo __('view_our_products'); ?></a>
     </div>
 </div>
@@ -96,7 +96,7 @@ $partners = [
     <!-- Featured Products Section -->
     <section class="featured-products mb-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="text-primary"><?php echo __('featured_products'); ?></h2>
+            <h2 class="text-primary <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('featured_products'); ?></h2>
             <a href="products.php" class="btn btn-outline-primary"><?php echo __('view_all'); ?></a>
         </div>
         
@@ -105,14 +105,14 @@ $partners = [
             <div class="col-md-4 mb-4">
                 <div class="card h-100 product-card">
                     <div class="product-image">
-                        <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $product['image']; ?>" 
+                        <img src="https://picsum.photos/300/200?random=<?php echo $product['id']; ?>" 
                              class="card-img-top" alt="<?php echo $product[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?>">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title product-title"><?php echo $product[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?></h5>
-                        <p class="card-text product-description"><?php echo $product[getCurrentLanguage() === 'ar' ? 'description_ar' : 'description_en']; ?></p>
+                        <h5 class="card-title product-title <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo $product[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?></h5>
+                        <p class="card-text product-description <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo $product[getCurrentLanguage() === 'ar' ? 'description_ar' : 'description_en']; ?></p>
                         <div class="mt-auto product-meta">
-                            <span class="price fw-bold text-success">$<?php echo $product['price']; ?></span>
+                            <span class="price fw-bold text-success en-text">$<?php echo $product['price']; ?></span>
                             <span class="availability badge bg-<?php echo $product['availability'] === 'in_stock' ? 'success' : 'danger'; ?>">
                                 <?php echo __($product['availability']); ?>
                             </span>
@@ -131,8 +131,8 @@ $partners = [
     <section class="about-us mb-5">
         <div class="row">
             <div class="col-lg-6 mb-4">
-                <h2 class="text-primary"><?php echo __('who_we_are'); ?></h2>
-                <p><?php echo __('about_company_text'); ?></p>
+                <h2 class="text-primary <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('who_we_are'); ?></h2>
+                <p class="<?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('about_company_text'); ?></p>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> <?php echo __('quality_assurance'); ?></li>
                     <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i> <?php echo __('fast_delivery'); ?></li>
@@ -141,7 +141,7 @@ $partners = [
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h2 class="text-primary"><?php echo __('why_choose_us'); ?></h2>
+                <h2 class="text-primary <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('why_choose_us'); ?></h2>
                 <div class="accordion" id="whyChooseUsAccordion">
                     <div class="accordion-item">
                         <h3 class="accordion-header">
@@ -186,7 +186,7 @@ $partners = [
     
     <!-- Testimonials Section -->
     <section class="testimonials mb-5">
-        <h2 class="text-primary text-center mb-4"><?php echo __('what_clients_say'); ?></h2>
+        <h2 class="text-primary text-center mb-4 <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('what_clients_say'); ?></h2>
         <div class="row">
             <?php foreach ($testimonials as $testimonial): ?>
             <div class="col-md-6 mb-4">
@@ -196,8 +196,8 @@ $partners = [
                             <p>"<?php echo $testimonial[getCurrentLanguage() === 'ar' ? 'content_ar' : 'content_en']; ?>"</p>
                         </div>
                         <div class="testimonial-author">
-                            <h5 class="mb-1"><?php echo $testimonial[getCurrentLanguage() === 'ar' ? 'client_name_ar' : 'client_name_en']; ?></h5>
-                            <small class="text-muted"><?php echo $testimonial[getCurrentLanguage() === 'ar' ? 'company_ar' : 'company_en']; ?></small>
+                            <h5 class="mb-1 <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo $testimonial[getCurrentLanguage() === 'ar' ? 'client_name_ar' : 'client_name_en']; ?></h5>
+                            <small class="text-muted <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo $testimonial[getCurrentLanguage() === 'ar' ? 'company_ar' : 'company_en']; ?></small>
                         </div>
                     </div>
                 </div>
@@ -208,16 +208,16 @@ $partners = [
     
     <!-- Partners Section -->
     <section class="partners mb-5">
-        <h2 class="text-primary text-center mb-4"><?php echo __('our_partners'); ?></h2>
+        <h2 class="text-primary text-center mb-4 <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo __('our_partners'); ?></h2>
         <div class="row">
             <?php foreach ($partners as $partner): ?>
             <div class="col-md-4 mb-4">
                 <div class="card h-100 text-center partner-card">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                        <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $partner['logo']; ?>" 
+                        <img src="https://picsum.photos/150/80?random=<?php echo $partner['id']; ?>" 
                              alt="<?php echo $partner[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?>" 
                              class="img-fluid mb-3" style="max-height: 80px;">
-                        <h5 class="card-title"><?php echo $partner[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?></h5>
+                        <h5 class="card-title <?php echo getCurrentLanguage() === 'ar' ? 'arabic' : ''; ?>"><?php echo $partner[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?></h5>
                         <a href="<?php echo $partner['website']; ?>" target="_blank" class="btn btn-outline-primary"><?php echo __('visit_website'); ?></a>
                     </div>
                 </div>

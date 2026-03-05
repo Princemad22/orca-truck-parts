@@ -11,7 +11,7 @@ define('ADMIN_URL', SITE_URL . '/admin');
 define('ASSETS_URL', SITE_URL . '/assets');
 
 // Language configuration
-define('DEFAULT_LANGUAGE', 'en');
+define('DEFAULT_LANGUAGE', 'ar');
 
 // Security
 define('CSRF_TOKEN_NAME', 'csrf_token');
