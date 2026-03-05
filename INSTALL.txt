@@ -98,7 +98,7 @@ RewriteRule ^(.*)$ index.php [QSA,L]
    - Navigation works
    - Language switching works
    - Dark/light mode toggle works
-3. Access the admin panel at `https://yourdomain.com/admin/`
+3. Access the admin panel at `https://yourdomain.com/Mad362/`
 4. Log in with the default credentials
 5. Change the default admin password immediately
 
