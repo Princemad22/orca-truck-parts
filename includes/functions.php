@@ -102,6 +102,30 @@ function uploadFile($file, $uploadDir) {
     return false;
 }
 
+
+
+/**
+ * Check whether a table exists in current database
+ */
+if (!function_exists('adminTableExists')) {
+    function adminTableExists(PDO $pdo, string $table): bool {
+        $quotedTable = $pdo->quote($table);
+        $stmt = $pdo->query("SHOW TABLES LIKE {$quotedTable}");
+        return (bool) $stmt->fetchColumn();
+    }
+}
+
+/**
+ * Fetch all rows helper for admin pages
+ */
+if (!function_exists('adminFetchAll')) {
+    function adminFetchAll(PDO $pdo, string $query, array $params = []): array {
+        $stmt = $pdo->prepare($query);
+        $stmt->execute($params);
+        return $stmt->fetchAll();
+    }
+}
+
 /**
  * Get settings from database
  */
