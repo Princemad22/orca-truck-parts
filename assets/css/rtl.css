@@ -1,0 +1,112 @@
+/* RTL Styles */
+body[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+body[dir="rtl"] .navbar-nav {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+body[dir="rtl"] .me-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+body[dir="rtl"] .ms-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+body[dir="rtl"] .me-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+body[dir="rtl"] .ms-2 {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+body[dir="rtl"] .float-start {
+  float: right !important;
+}
+
+body[dir="rtl"] .float-end {
+  float: left !important;
+}
+
+body[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+body[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Adjust specific elements */
+body[dir="rtl"] .breadcrumb-item + .breadcrumb-item {
+  padding-right: 0.5rem;
+  padding-left: 0;
+}
+
+body[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+
+/* Flip pagination */
+body[dir="rtl"] .page-item:first-child .page-link {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+body[dir="rtl"] .page-item:last-child .page-link {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Adjust card components */
+body[dir="rtl"] .card-img-top {
+  border-top-right-radius: calc(0.75rem - 1px);
+  border-top-left-radius: 0;
+}
+
+/* Adjust icons positioning */
+body[dir="rtl"] .fa-facebook-f,
+body[dir="rtl"] .fa-twitter,
+body[dir="rtl"] .fa-instagram,
+body[dir="rtl"] .fa-linkedin-in {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* Adjust form controls */
+body[dir="rtl"] .form-check-input {
+  float: right;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+body[dir="rtl"] .form-switch .form-check-input {
+  margin-right: -2.5em;
+}
+
+/* Adjust dropdown menu */
+body[dir="rtl"] .dropdown-menu {
+  text-align: right;
+  right: 0;
+  left: auto;
+}
+
+/* Adjust navbar toggler */
+body[dir="rtl"] .navbar-toggler {
+  margin-right: auto;
+  margin-left: 0.5rem;
+}
