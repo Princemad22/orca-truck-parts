@@ -35,7 +35,7 @@ class Database {
 
     // Prevent cloning and unserialize
     private function __clone() {}
-    private function __wakeup() {}
+    public function __wakeup() {}
 }
 
 function getDB() {
