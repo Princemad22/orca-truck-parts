@@ -7,7 +7,7 @@ define('DB_NAME', $_ENV['DB_NAME'] ?? '4725017_mad362');
 
 // Site configuration
 define('SITE_URL', $_ENV['SITE_URL'] ?? 'http://orca-truck-parts.atwebpages.com');
-define('ADMIN_URL', SITE_URL . '/admin');
+define('ADMIN_URL', SITE_URL . '/Mad362');
 define('ASSETS_URL', SITE_URL . '/assets');
 
 // Language configuration
