@@ -52,16 +52,16 @@ $categoryName = $categoryNames[$product['category_id']][getCurrentLanguage()];
         <div class="col-lg-6">
             <div class="product-gallery">
                 <div class="main-image mb-3">
-                    <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $product['image']; ?>" 
+                    <img src="https://picsum.photos/920/540?random=<?php echo $product['id'] + 600; ?>" 
                          class="img-fluid rounded shadow" alt="<?php echo $product[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?>">
                 </div>
                 
                 <?php if (!empty($product['additional_images'])): ?>
                 <div class="thumbnail-images d-flex flex-wrap gap-2">
-                    <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $product['image']; ?>" 
+                    <img src="https://picsum.photos/920/540?random=<?php echo $product['id'] + 600; ?>" 
                          class="img-thumbnail cursor-pointer" alt="Main image" style="width: 80px; height: 80px; object-fit: cover;">
                     <?php foreach ($product['additional_images'] as $img): ?>
-                    <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $img; ?>" 
+                    <img src="https://picsum.photos/160/100?random=<?php echo crc32($img); ?>" 
                          class="img-thumbnail cursor-pointer" alt="Additional image" style="width: 80px; height: 80px; object-fit: cover;">
                     <?php endforeach; ?>
                 </div>
@@ -114,7 +114,7 @@ $categoryName = $categoryNames[$product['category_id']][getCurrentLanguage()];
                 <!-- Related products would go here in a real implementation -->
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/product2.jpg" class="card-img-top" alt="Related Product">
+                        <img src="https://picsum.photos/420/260?random=611" class="card-img-top" alt="Related Product">
                         <div class="card-body">
                             <h5 class="card-title">Related Product 1</h5>
                             <p class="card-text">$59.99</p>
@@ -124,7 +124,7 @@ $categoryName = $categoryNames[$product['category_id']][getCurrentLanguage()];
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/product3.jpg" class="card-img-top" alt="Related Product">
+                        <img src="https://picsum.photos/420/260?random=612" class="card-img-top" alt="Related Product">
                         <div class="card-body">
                             <h5 class="card-title">Related Product 2</h5>
                             <p class="card-text">$89.99</p>
@@ -134,7 +134,7 @@ $categoryName = $categoryNames[$product['category_id']][getCurrentLanguage()];
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/product4.jpg" class="card-img-top" alt="Related Product">
+                        <img src="https://picsum.photos/420/260?random=613" class="card-img-top" alt="Related Product">
                         <div class="card-body">
                             <h5 class="card-title">Related Product 3</h5>
                             <p class="card-text">$32.50</p>
@@ -144,7 +144,7 @@ $categoryName = $categoryNames[$product['category_id']][getCurrentLanguage()];
                 </div>
                 <div class="col-md-3">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/product5.jpg" class="card-img-top" alt="Related Product">
+                        <img src="https://picsum.photos/420/260?random=614" class="card-img-top" alt="Related Product">
                         <div class="card-body">
                             <h5 class="card-title">Related Product 4</h5>
                             <p class="card-text">$150.00</p>

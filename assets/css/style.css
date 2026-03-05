@@ -16,15 +16,15 @@
 }
 
 .dark-mode {
-  --bg-color: #121212;
-  --text-color: #e9ecef;
-  --card-bg: #1e1e1e;
-  --border-color: #444444;
-  --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -35,9 +35,17 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
+* {
+  font-variant-numeric: lining-nums;
+}
+
 /* Ensure numbers remain in English regardless of language */
 .arabic [lang="en"], .arabic .en-text {
   font-family: "Times New Roman", Times, serif;
+}
+
+* {
+  font-variant-numeric: lining-nums;
 }
 
 h1, h2, h3, h4, h5, h6 {

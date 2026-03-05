@@ -1,6 +1,15 @@
 <?php
 session_start();
 
+// Apply language from query parameter first
+if (isset($_GET['lang'])) {
+    $requestedLanguage = strtolower(trim((string) $_GET['lang']));
+    if (in_array($requestedLanguage, ['ar', 'en'], true)) {
+        $_SESSION['language'] = $requestedLanguage;
+        setcookie('language', $requestedLanguage, time() + (86400 * 30), '/');
+    }
+}
+
 // Initialize language
 if (!isset($_SESSION['language'])) {
     if (isset($_COOKIE['language'])) {

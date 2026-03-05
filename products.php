@@ -143,7 +143,7 @@ $filteredProducts = $selectedCategory ? array_filter($products, function($produc
                 <div class="col-md-6 col-lg-4 mb-4 product-item" data-category="<?php echo $product['category_id']; ?>">
                     <div class="card h-100 product-card">
                         <div class="product-image">
-                            <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $product['image']; ?>" 
+                            <img src="https://picsum.photos/400/280?random=<?php echo $product['id'] + 100; ?>" 
                                  class="card-img-top" alt="<?php echo $product[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?>">
                         </div>
                         <div class="card-body d-flex flex-column">

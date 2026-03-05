@@ -32,7 +32,7 @@ header('Content-Type: text/html; charset=utf-8');
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo ASSETS_URL; ?>/images/favicon.ico">
 </head>
-<body class="<?php echo $_COOKIE['theme'] ?? 'light'; ?>-mode">
+<body class="light-mode">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="<?php echo SITE_URL; ?>">
@@ -81,7 +81,7 @@ header('Content-Type: text/html; charset=utf-8');
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" id="themeToggle" style="cursor: not-allowed; opacity: 0.5;">
+                        <a class="nav-link disabled" href="#" id="themeToggle" title="<?php echo __('light_mode'); ?>" style="cursor: not-allowed; opacity: 0.5;">
                             <i class="fas fa-sun"></i>
                         </a>
                     </li>
