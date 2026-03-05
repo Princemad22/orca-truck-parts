@@ -92,7 +92,7 @@ $suppliers = [
             <div class="card h-100 supplier-card">
                 <div class="card-body text-center">
                     <div class="supplier-logo mb-3">
-                        <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $supplier['logo']; ?>" 
+                        <img src="https://picsum.photos/240/120?random=<?php echo $supplier['id'] + 300; ?>" 
                              alt="<?php echo $supplier[getCurrentLanguage() === 'ar' ? 'name_ar' : 'name_en']; ?>" 
                              class="img-fluid" style="max-height: 80px;">
                     </div>

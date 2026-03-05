@@ -40,7 +40,7 @@ $newsItem = [
                 </div>
                 
                 <div class="text-center mb-4">
-                    <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $newsItem['image']; ?>" 
+                    <img src="https://picsum.photos/1200/600?random=<?php echo $newsItem['id'] + 400; ?>" 
                          class="img-fluid rounded shadow" alt="<?php echo $newsItem[getCurrentLanguage() === 'ar' ? 'title_ar' : 'title_en']; ?>">
                 </div>
                 
@@ -76,7 +76,7 @@ $newsItem = [
                 <!-- Related articles would go here in a real implementation -->
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/news2.jpg" class="card-img-top" alt="Related Article">
+                        <img src="https://picsum.photos/420/260?random=501" class="card-img-top" alt="Related Article">
                         <div class="card-body">
                             <h5 class="card-title">New Product Launch</h5>
                             <p class="card-text">ORCA launches a new range of spare parts specially designed for...</p>
@@ -86,7 +86,7 @@ $newsItem = [
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/news3.jpg" class="card-img-top" alt="Related Article">
+                        <img src="https://picsum.photos/420/260?random=502" class="card-img-top" alt="Related Article">
                         <div class="card-body">
                             <h5 class="card-title">Award Recognition</h5>
                             <p class="card-text">ORCA Company wins the award for Best Truck Spare Parts Supplier of...</p>
@@ -96,7 +96,7 @@ $newsItem = [
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="<?php echo ASSETS_URL; ?>/images/news1.jpg" class="card-img-top" alt="Related Article">
+                        <img src="https://picsum.photos/420/260?random=503" class="card-img-top" alt="Related Article">
                         <div class="card-body">
                             <h5 class="card-title">Partnership Announcement</h5>
                             <p class="card-text">ORCA announces a new partnership with global company Caterpillar to...</p>

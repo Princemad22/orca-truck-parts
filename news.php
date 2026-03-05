@@ -71,7 +71,7 @@ $news = [
         <?php foreach ($news as $item): ?>
         <div class="col-lg-4 col-md-6 mb-4 news-item" data-category="<?php echo $item['category']; ?>">
             <div class="card h-100 news-card">
-                <img src="<?php echo ASSETS_URL; ?>/images/<?php echo $item['image']; ?>" 
+                <img src="https://picsum.photos/900/420?random=<?php echo $item['id'] + 200; ?>" 
                      class="card-img-top" alt="<?php echo $item[getCurrentLanguage() === 'ar' ? 'title_ar' : 'title_en']; ?>">
                 <div class="card-body d-flex flex-column">
                     <span class="badge bg-primary mb-2" style="width: fit-content;"><?php echo $item['category']; ?></span>
