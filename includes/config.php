@@ -6,7 +6,7 @@ define('DB_PASS', $_ENV['DB_PASS'] ?? 'Aa@362362559');
 define('DB_NAME', $_ENV['DB_NAME'] ?? '4725017_mad362');
 
 // Site configuration
-define('SITE_URL', $_ENV['orca-truck-parts.atwebpages.com'] ?? 'http://localhost/orca-truck-parts');
+define('SITE_URL', $_ENV['SITE_URL'] ?? 'http://orca-truck-parts.atwebpages.com');
 define('ADMIN_URL', SITE_URL . '/admin');
 define('ASSETS_URL', SITE_URL . '/assets');
 
