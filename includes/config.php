@@ -1,12 +1,12 @@
 <?php
 // Database configuration
-define('DB_HOST', $_ENV['DB_HOST'] ?? 'localhost');
-define('DB_USER', $_ENV['DB_USER'] ?? 'root');
-define('DB_PASS', $_ENV['DB_PASS'] ?? '');
-define('DB_NAME', $_ENV['DB_NAME'] ?? 'orca_truck_parts');
+define('DB_HOST', $_ENV['DB_HOST'] ?? 'fdb1033.awardspace.net');
+define('DB_USER', $_ENV['DB_USER'] ?? '4725017_mad362');
+define('DB_PASS', $_ENV['DB_PASS'] ?? 'Aa@362362559');
+define('DB_NAME', $_ENV['DB_NAME'] ?? '4725017_mad362');
 
 // Site configuration
-define('SITE_URL', $_ENV['SITE_URL'] ?? 'http://localhost/orca-truck-parts');
+define('SITE_URL', $_ENV['orca-truck-parts.atwebpages.com'] ?? 'http://localhost/orca-truck-parts');
 define('ADMIN_URL', SITE_URL . '/admin');
 define('ASSETS_URL', SITE_URL . '/assets');
 
