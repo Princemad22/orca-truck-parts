@@ -1,0 +1,142 @@
+# Installation Guide for ORCA Truck Parts Website
+
+This guide explains how to install the ORCA Truck Parts website on your hosting provider (specifically awardspace.net).
+
+## Prerequisites
+
+- Web hosting account with PHP 8.0+ support
+- MySQL database access
+- FTP access or file manager
+- Domain name pointing to your hosting account
+
+## Step-by-Step Installation
+
+### 1. Prepare Your Hosting Environment
+
+1. Log in to your awardspace.net control panel
+2. Create a new MySQL database:
+   - Go to Databases section
+   - Click "MySQL Database"
+   - Create a new database and note down the credentials (database name, username, password)
+3. Make sure PHP version is 8.0 or higher (check in Server Settings)
+
+### 2. Upload Files
+
+1. Compress all the project files into a ZIP archive
+2. Using FTP client or File Manager:
+   - Upload the ZIP file to your hosting account
+   - Extract the ZIP file to your root directory (usually named "public_html" or "htdocs")
+3. Make sure all files have proper permissions:
+   - Directories: 755
+   - Files: 644
+   - Special files like .htaccess: 644
+
+### 3. Configure Database Connection
+
+1. Open the file `/includes/config.php` in your editor
+2. Update the database constants with your database credentials:
+   ```php
+   define('DB_HOST', 'localhost'); // Usually localhost
+   define('DB_USER', 'your_database_username');
+   define('DB_PASS', 'your_database_password');
+   define('DB_NAME', 'your_database_name');
+   ```
+
+3. Update the site URL constant:
+   ```php
+   define('SITE_URL', 'https://yourdomain.com');
+   ```
+
+### 4. Import Database Schema
+
+1. Access phpMyAdmin from your awardspace control panel
+2. Select your newly created database
+3. Click on "Import" tab
+4. Browse and select the `install_db.sql` file from your project folder
+5. Click "Go" to import the database schema and sample data
+6. The installation will create all necessary tables and add a default admin user
+
+Default admin credentials:
+- Username: admin
+- Password: admin123 (you should change this immediately after first login)
+
+### 5. Set Up File Permissions
+
+Make sure these directories have write permissions (755 or 777 depending on your host):
+- `/assets/uploads/`
+- `/assets/uploads/products/`
+- `/assets/uploads/categories/`
+- `/assets/uploads/news/`
+
+### 6. Configure .htaccess (if needed)
+
+If your site uses URL rewriting, make sure the `.htaccess` file is properly configured:
+
+```
+RewriteEngine On
+RewriteBase /
+
+# Prevent access to sensitive files
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+    Require all denied
+</Files>
+
+# Allow access to assets
+RewriteRule ^assets/(.*)$ assets/$1 [L]
+
+# Route requests to appropriate files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+```
+
+### 7. Test Your Installation
+
+1. Visit your domain in a web browser
+2. Check that:
+   - Homepage loads correctly
+   - Navigation works
+   - Language switching works
+   - Dark/light mode toggle works
+3. Access the admin panel at `https://yourdomain.com/admin/`
+4. Log in with the default credentials
+5. Change the default admin password immediately
+
+### 8. Post-Installation Security Steps
+
+1. Change the default admin password
+2. Consider renaming the admin directory for extra security
+3. Update the default admin email address
+4. Remove or rename the install_db.sql file from the server
+5. Set up regular backups of your database and files
+
+### 9. Additional Configuration Options
+
+You can customize the following in the admin panel:
+- Site name and description
+- Contact information
+- Social media links
+- Theme preferences
+- Product categories and items
+- News and announcements
+- Testimonials
+- Partner information
+
+## Troubleshooting
+
+### Common Issues:
+
+1. **Database connection error**: Verify your database credentials in config.php
+2. **Permission errors**: Ensure the upload directories have write permissions
+3. **Page not found**: Check that .htaccess is properly configured and mod_rewrite is enabled
+4. **Images not displaying**: Verify upload directories exist and have proper permissions
+5. **Admin login not working**: Clear browser cache and cookies, then try again
+
+### Error Logs:
+Check your hosting control panel for PHP error logs if issues persist.
+
+## Support
+
+For technical support, please contact your hosting provider (awardspace.net) for server-specific issues.
+
+For questions about the ORCA Truck Parts website code, refer to the documentation included with the package.
