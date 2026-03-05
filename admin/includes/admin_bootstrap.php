@@ -12,8 +12,8 @@ require_once __DIR__ . '/../../includes/functions.php';
 require_once __DIR__ . '/../../includes/auth.php';
 
 function adminTableExists(PDO $pdo, string $table): bool {
-    $stmt = $pdo->prepare('SHOW TABLES LIKE ?');
-    $stmt->execute([$table]);
+    $quotedTable = $pdo->quote($table);
+    $stmt = $pdo->query("SHOW TABLES LIKE {$quotedTable}");
     return (bool) $stmt->fetchColumn();
 }
 
