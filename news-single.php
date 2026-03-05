@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'News Detail';
-include '../includes/header.php';
+include 'includes/header.php';
 
 // Sample news data (in a real application, this would come from the database)
 $newsId = isset($_GET['id']) ? (int)$_GET['id'] : 1;
@@ -110,5 +110,5 @@ $newsItem = [
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

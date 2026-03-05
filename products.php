@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Products';
-include '../includes/header.php';
+include 'includes/header.php';
 
 // Sample product categories
 $categories = [
@@ -177,5 +177,5 @@ $filteredProducts = $selectedCategory ? array_filter($products, function($produc
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

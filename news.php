@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'News';
-include '../includes/header.php';
+include 'includes/header.php';
 
 // Sample news data
 $news = [
@@ -113,5 +113,5 @@ $news = [
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>
