@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Suppliers';
-include '../includes/header.php';
+include 'includes/header.php';
 
 // Sample suppliers data
 $suppliers = [
@@ -125,5 +125,5 @@ $suppliers = [
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

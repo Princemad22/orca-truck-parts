@@ -7,10 +7,10 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
     exit();
 }
 
-require_once '../includes/config.php';
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
-require_once '../includes/auth.php';
+require_once '../../includes/config.php';
+require_once '../../includes/db.php';
+require_once '../../includes/functions.php';
+require_once '../../includes/auth.php';
 
 $error_message = '';
 

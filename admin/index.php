@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Dashboard';
-include 'includes/header.php';
+include '../includes/header.php';
 
 // Fetch some statistics
 try {
@@ -131,5 +131,5 @@ try {
 </div>
 
 <?php
-include 'includes/footer.php';
+include '../includes/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Contact Us';
-include '../includes/header.php';
+include 'includes/header.php';
 
 // Process form submission
 $message_sent = false;
@@ -179,5 +179,5 @@ $csrf_token = generateCSRFToken();
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

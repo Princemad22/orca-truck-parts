@@ -8,10 +8,10 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['role'])) {
 }
 
 // Include necessary files
-require_once '../includes/config.php';
-require_once '../includes/db.php';
-require_once '../includes/functions.php';
-require_once '../includes/auth.php';
+require_once '../../includes/config.php';
+require_once '../../includes/db.php';
+require_once '../../includes/functions.php';
+require_once '../../includes/auth.php';
 
 // Set page title (to be defined in each page)
 $pageTitle = $pageTitle ?? 'Admin Dashboard';

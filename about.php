@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'About Us';
-include '../includes/header.php';
+include 'includes/header.php';
 ?>
 
 <div class="container my-5">
@@ -137,5 +137,5 @@ include '../includes/header.php';
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

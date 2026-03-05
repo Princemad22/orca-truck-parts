@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Product Detail';
-include '../includes/header.php';
+include 'includes/header.php';
 
 // Sample product data (in a real application, this would come from the database)
 $productId = isset($_GET['id']) ? (int)$_GET['id'] : 1;
@@ -158,5 +158,5 @@ $categoryName = $categoryNames[$product['category_id']][getCurrentLanguage()];
 </div>
 
 <?php
-include '../includes/footer.php';
+include 'includes/footer.php';
 ?>

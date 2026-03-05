@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Manage Pages';
-include 'includes/header.php';
+include '../includes/header.php';
 
 // Check if user has permission to manage pages
 if ($_SESSION['role'] !== 'super_admin' && $_SESSION['role'] !== 'admin') {
@@ -339,5 +339,5 @@ try {
 </div>
 
 <?php
-include 'includes/footer.php';
+include '../includes/footer.php';
 ?>
